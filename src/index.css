@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-blackCm;
+  }
+  h1 {
+    @apply text-h1;
+  }
+
+  h2 {
+    @apply text-h2;
+  }
+
+  h3 {
+    @apply text-h3;
+  }
+
+  h4 {
+    @apply text-h4;
+  }
+}
+
+@layer components {
+  .buttom {
+    border: theme('colors.yellow') solid theme('borderWidth.DEFAULT');
+    border-radius: theme('borderRadius.full');
+    padding: theme('spacing.3');
+    color: theme('colors.yellow');
+    background-color: theme('colors.transparent');
+    display: inline-block;
+    text-align: center;
+    transition: all ease 1s;
+  }
+  .buttom:hover {
+    background: linear-gradient(
+      90deg,
+      theme('colors.yellow') 20%,
+      theme('colors.mustard') 80%
+    );
+    color: theme('colors.night');
+  }
+
+  .input-dp {
+    border-bottom: theme('colors.gray') solid theme('borderWidth.DEFAULT');
+    background: theme('colors.transparent');
+    font-size: theme('fontSize.h4');
+    color: theme('colors.white');
+    padding: theme('spacing.0') theme('spacing.3');
+    caret-color: theme('colors.mustard');
+  }
+
+  .input-dp::placeholder {
+    color: theme('colors.gray');
+  }
+
+  .input-dp:hover {
+    border-color: theme('colors.mustard');
+  }
+
+  .input-dp:focus-visible {
+    border-color: theme('colors.mustard');
+  }
+
+  .input-dp:focus::placeholder {
+    color: theme('colors.transparent');
+  }
+
+  .input-dp:focus {
+    outline: none;
+  }
+
+  .input-dp[type='number']::-webkit-inner-spin-button,
+  .input-dp[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
