@@ -10,6 +10,7 @@ module.exports = {
       h3: '0.813rem',
       h4: '0.688rem',
     },
+
     extend: {
       colors: {
         blackCm: '#111110',
@@ -18,7 +19,13 @@ module.exports = {
         mustard: '#F8B525',
         yellow: '#FFD160',
         white: '#FCF4E2',
+        blackOpacity: 'rgba(0,0,0,0.5)',
       },
+
+      transitionTimingFunction: {
+        expo: 'cubic-bezier(1,-0.6,1,.91)',
+      },
+
       fontFamily: {
         sans: ['Comfortaa', ...defaultTheme.fontFamily.sans],
       },

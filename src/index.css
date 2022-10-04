@@ -80,3 +80,15 @@
     margin: 0;
   }
 }
+
+span.active {
+  @apply border border-mustard text-mustard;
+}
+
+nav a {
+  @apply relative;
+}
+
+nav a:hover {
+  @apply after:absolute after:w-10 after:h-[1px] after:bottom-0 after:left-0 after:bg-mustard;
+}
