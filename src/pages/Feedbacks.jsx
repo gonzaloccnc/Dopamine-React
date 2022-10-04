@@ -82,7 +82,7 @@ const Feedbacks = () => {
                   <CardBorder
                     url={person}
                     pos='bottomRight'
-                    size='w-[250px] h-[250px]'
+                    size='md:w-[250px] md:h-[250px]'
                   />
                   <div className='text-white w-1/2 relative'>
                     <h2>Martha</h2>

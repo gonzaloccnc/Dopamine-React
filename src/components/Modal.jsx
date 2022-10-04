@@ -54,12 +54,14 @@ const Modal = ({
       onClick={closeModalOw}
     >
       <div
-        className={`w-[400px] h-[300px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 relative rounded-2xl before:content-[""] before:border before:border-mustard before:border-solid before:w-full before:h-full before:absolute before:rounded-2xl before:-bottom-5 before:-right-5`}
+        className={`xs:w-4/5 xs:h-1/2 sm:w-2/5 sm:h-3/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 relative rounded-2xl xs:border xs:border-mustard md:border-0 md:before:content-[""] md:before:border md:before:border-mustard md:before:border-solid md:before:w-full md:before:h-full md:before:absolute md:before:rounded-2xl md:before:-bottom-5 md:before:-right-5`}
       >
         <div className='w-full h-full rounded-2xl bg-night text-center text-white pt-7 relative'>
           <div className='w-3/5 mx-auto h-full justify-around flex-col flex relative'>
             <div className='flex flex-col'>
-              <h3 className='text-white text-center'>{message}</h3>
+              <h3 className='text-white text-center xs:text-h4 sm:text-h3'>
+                {message}
+              </h3>
             </div>
             <div className='flex flex-col w-full gap-8'>
               <input
@@ -85,7 +87,7 @@ const Modal = ({
             </div>
             <a
               href='#'
-              className='buttom inline-flex w-full h-10 justify-center items-center'
+              className='xs:mt-5 sm:mt-0 buttom inline-flex md:w-full xs:w-4/5 xs:mx-auto md:mx-0 h-10 justify-center items-center xs:text-h4'
               onClick={send}
             >
               Send

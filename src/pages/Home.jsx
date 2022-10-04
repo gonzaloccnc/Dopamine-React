@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <main className='flex'>
-      <div className='w-2/5 h-screen bg-night pt-[150px] pl-10 flex flex-col justify-around'>
+      <div className='w-2/5 h-screen bg-night pt-[150px] pl-10 md:flex flex-col justify-around xs:hidden'>
         <h2 className='text-white w-3/4'>
           Food from our restaurant drives up not only dopamine in your brain,
           <br />
@@ -23,9 +23,19 @@ const Home = () => {
         </div>
       </div>
       <div
-        className='w-3/5 h-screen bg-[url(.\..\images\strawberries.jpg)] bg-no-repeat bg-cover'
+        className='xs:w-full md:w-3/5 h-screen bg-[url(.\..\images\strawberries.jpg)] bg-no-repeat bg-cover'
         id='bg-wave'
-      ></div>
+      >
+        <div className='md:hidden sm:block'>
+          <a
+            href='#reserve'
+            className='buttom absolute bottom-16 left-1/2 -translate-x-1/2 xs:text-h4 sm:text-h3'
+            onClick={modalO}
+          >
+            Reserve a Table
+          </a>
+        </div>
+      </div>
       {modal ? (
         <Modal
           closeModal={openModal}

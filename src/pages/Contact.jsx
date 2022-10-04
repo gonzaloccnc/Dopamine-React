@@ -14,35 +14,46 @@ const Contact = () => {
   }
 
   return (
-    <main className='py-16 h-screen'>
+    <main className='md:py-16 xs:pt-12 h-screen'>
       <TitleDecorate title='Contact us' />
-      <div className='flex justify-around'>
-        <div className='w-80 flex flex-col gap-16'>
-          <div>
+      <div className='flex xs:flex-row-reverse md:flex-row justify-around xs:gap-8 xs:pl-5'>
+        <div className='md:w-80 flex flex-col md:gap-16 xs:gap-6'>
+          <div className='xs:flex xs:flex-col md:block xs:items-end xs:px-5 md:px-0'>
             <SubtitleDecorate title='Address' />
-            <p className='text-white mt-5'>
+            <p className='text-white mt-5 xs:text-end md:text-start'>
               24 Dovercroft Pl SE, Calgary, Canada
             </p>
           </div>
-          <div>
+          <div className='xs:flex xs:flex-col md:block xs:items-end xs:px-5 md:px-0'>
             <SubtitleDecorate title='Number' />
-            <p className='text-white mt-5'>+1 231 - 201 - 1108</p>
+            <p className='text-white mt-5 xs:text-end md:text-start'>
+              +1 231 - 201 - 1108
+            </p>
           </div>
-          <div>
+          <div className='xs:flex xs:flex-col md:block xs:items-end xs:px-5 md:px-0'>
             <SubtitleDecorate title='Schedule' />
-            <p className='text-white mt-5'>
+            <p className='text-white mt-5 xs:text-end md:text-start'>
               Mon. - Fri.:8 a.m - 8 p.m.
               <br />
               Sat. Sun.:9 a.m - 7 p.m.
             </p>
           </div>
-          <div>
+          <div className='xs:hidden md:block'>
             <a href='#' className='buttom' onClick={modalO}>
               Reserve a Table
             </a>
           </div>
         </div>
-        <CardBorder url={map} size='w-[500px] h-[500px]' pos='bottomRight' />
+        <CardBorder
+          url={map}
+          size='lg:w-[480px] lg:h-[480px] xs:h-[160px] xs:mx-0 xs:mt-0 sm:h-[300px]'
+          pos='bottomRight'
+        />
+      </div>
+      <div className='sm:text-h3 xs:text-h4 md:hidden mt-10 xs:grid xs:place-content-center'>
+        <a href='#' className='buttom' onClick={modalO}>
+          Reserve a Table
+        </a>
       </div>
       {modal ? (
         <Modal
