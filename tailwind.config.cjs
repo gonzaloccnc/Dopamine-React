@@ -4,13 +4,18 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   theme: {
+    screens: {
+      xs: '240px',
+      ...defaultTheme.screens,
+    },
+
     fontSize: {
       h1: '1.563rem',
       h2: '1.25rem',
       h3: '0.813rem',
       h4: '0.688rem',
+      mobile: '0.4rem',
     },
-
     extend: {
       colors: {
         blackCm: '#111110',
