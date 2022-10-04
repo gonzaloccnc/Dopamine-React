@@ -3,10 +3,18 @@ import SubtitleDecorate from '../components/SubtitleDecorate'
 import TitleDecorate from '../components/TitleDecorate'
 import map from '../../images/map.jpg'
 import CardBorder from '../components/CardBorder'
+import Modal from '../components/Modal'
+import useModal from '../hooks/useModal'
 
 const Contact = () => {
+  const [modal, openModal] = useModal()
+  const modalO = e => {
+    e.preventDefault()
+    openModal(!modal)
+  }
+
   return (
-    <main className='py-16'>
+    <main className='py-16 h-screen'>
       <TitleDecorate title='Contact us' />
       <div className='flex justify-around'>
         <div className='w-80 flex flex-col gap-16'>
@@ -29,13 +37,23 @@ const Contact = () => {
             </p>
           </div>
           <div>
-            <a href='#' className='buttom'>
+            <a href='#' className='buttom' onClick={modalO}>
               Reserve a Table
             </a>
           </div>
         </div>
         <CardBorder url={map} size='w-[500px] h-[500px]' pos='bottomRight' />
       </div>
+      {modal ? (
+        <Modal
+          closeModal={openModal}
+          message='Please leave your contact number and we will call you back.'
+          sendMessage='Thank you! We will call you in a minute'
+          placeHolder1='Name'
+          placeHolder2='Number'
+          type2='number'
+        />
+      ) : null}
     </main>
   )
 }
