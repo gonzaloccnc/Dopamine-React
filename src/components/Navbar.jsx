@@ -1,5 +1,6 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import logo from '../../images/dopamine.svg'
 
 const Navbar = () => {
   const { pathname } = useLocation()
@@ -8,11 +9,7 @@ const Navbar = () => {
     <header className='flex items-center xs:justify-between xs:px-5 md:justify-around w-full absolute xs:py-2 md:py-5'>
       <div className='flex flex-col justify-center items-center'>
         <Link to='/'>
-          <img
-            src='./dopamine.svg'
-            alt='dopamine logo'
-            className='xs:w-8 md:w-14'
-          />
+          <img src={logo} alt='dopamine logo' className='xs:w-8 md:w-14' />
         </Link>
         {pathname === '/' ? (
           <div className='text-center text-yellow'>
