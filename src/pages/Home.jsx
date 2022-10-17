@@ -1,5 +1,6 @@
 import Modal from '../components/Modal'
 import useModal from '../hooks/useModal'
+import mainIMG from '../../assets/strawberries.jpg'
 
 const Home = () => {
   const [modal, openModal] = useModal()
@@ -7,7 +8,7 @@ const Home = () => {
     e.preventDefault()
     openModal(!modal)
   }
-
+  console.log(mainIMG)
   return (
     <main className='flex'>
       <div className='w-2/5 h-screen bg-night pt-[150px] pl-10 md:flex flex-col justify-around xs:hidden'>
@@ -23,7 +24,8 @@ const Home = () => {
         </div>
       </div>
       <div
-        className='xs:w-full md:w-3/5 h-screen bg-[url(.\..\images\strawberries.jpg)] bg-no-repeat bg-cover'
+        className={`xs:w-full md:w-3/5 h-screen bg-no-repeat bg-cover`}
+        style={{backgroundImage: `url(${mainIMG})`}}
         id='bg-wave'
       >
         <div className='md:hidden sm:block'>

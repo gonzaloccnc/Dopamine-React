@@ -1,8 +1,8 @@
 import ArticleAbout from '../components/ArticleAbout'
 import TitleDecorate from '../components/TitleDecorate'
-import food1 from '../../images/food1.jpg'
-import food2 from '../../images/food2.jpg'
-import food3 from '../../images/food3.jpg'
+import food1 from '../../assets/food1.jpg'
+import food2 from '../../assets/food2.jpg'
+import food3 from '../../assets/food3.jpg'
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
       <TitleDecorate title={'About Us'} />
       <section>
         <ArticleAbout url={food1} subtitle='Why Dopamine'>
-          First of all, it is the place for people who are igue to eat delicious
+          First of all, it is the place for people who are ague to eat delicious
           food and not to put on weight. It is the place for those who want to
           enjoy amazing atmosphere, relaxing music and unsurpassed taste of our
           healthy food. If you keep fit, you are able not to be afraid of eating
@@ -19,7 +19,7 @@ const About = () => {
         <ArticleAbout
           url={food2}
           pos='topRight'
-          subtitle='What should you chosse?'
+          subtitle='What should you choose?'
           first
         >
           You can choose whatever you like, from simple but very tasty

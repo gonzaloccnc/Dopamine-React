@@ -1,16 +1,16 @@
 import TitleDecorate from '../../components/TitleDecorate'
 import { BsArrowRight } from 'react-icons/bs'
 import MenuCard from '../../components/MenuCard'
-import dish1 from '../../../images/dish1.jpg'
-import dish2 from '../../../images/dish2.jpg'
-import dish3 from '../../../images/dish3.jpg'
-import dish4 from '../../../images/dish4.jpg'
+import dish1 from '../../../assets/dish1.jpg'
+import dish2 from '../../../assets/dish2.jpg'
+import dish3 from '../../../assets/dish3.jpg'
+import dish4 from '../../../assets/dish4.jpg'
 
 const MenuDefault = ({ state, set }) => {
   return (
     <>
       <TitleDecorate title='Menu' />
-      <div className='flex justify-center flex-wrap gap-14'>
+      <div className='grid md:grid-cols-4 xs:grid-cols-2 gap-y-8'>
         <MenuCard title='Caramelized Squid Fillet' url={dish1} price='34' />
         <MenuCard
           title='Caramelized Squid Fillet'
