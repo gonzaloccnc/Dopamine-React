@@ -6,6 +6,7 @@
 
 @layer base {
   html {
+    background: #FF0000;
     @apply bg-blackCm;
   }
   h1 {

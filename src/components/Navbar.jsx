@@ -1,6 +1,6 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import logo from '../../images/dopamine.svg'
+import logo from '../../assets/dopamine.svg'
 
 const Navbar = () => {
   const { pathname } = useLocation()

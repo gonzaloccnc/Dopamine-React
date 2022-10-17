@@ -1,9 +1,9 @@
 import TitleDecorate from '../components/TitleDecorate'
 import CardBorder from '../components/CardBorder'
-import person from '../../images/person.jpg'
-import person2 from '../../images/person2.jpg'
-import person3 from '../../images/person3.jpg'
-import person4 from '../../images/person4.jpg'
+import person from '../../assets/person.jpg'
+import person2 from '../../assets/person2.jpg'
+import person3 from '../../assets/person3.jpg'
+import person4 from '../../assets/person4.jpg'
 import { AiFillStar } from 'react-icons/ai'
 import {
   BsFillArrowLeftCircleFill,
