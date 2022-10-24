@@ -1,4 +1,5 @@
 import MenuCard from '../../components/MenuCard'
+import ButtonSlide from '../../components/ButtonSlide.jsx'
 import dish1 from '../../../assets/dish1.jpg'
 import dish2 from '../../../assets/dish2.jpg'
 import dish3 from '../../../assets/dish3.jpg'
@@ -11,19 +12,38 @@ const AllMenu = () => {
 
   const swap = e => {
     const active = document.querySelector('span.active')
-    const items = document.querySelectorAll('.item-slide')
 
     active.classList.remove('active')
     e.target.classList.toggle('active')
 
     switch (e.target.id) {
       case '1':
+        container.current.classList.remove('ml-0')
         container.current.classList.remove('-ml-[100%]')
+        container.current.classList.remove('-ml-[200%]')
+        container.current.classList.remove('-ml-[300%]')
         container.current.classList.add('ml-0')
         break
       case '2':
         container.current.classList.remove('ml-0')
+        container.current.classList.remove('-ml-[100%]')
+        container.current.classList.remove('-ml-[200%]')
+        container.current.classList.remove('-ml-[300%]')
         container.current.classList.add('-ml-[100%]')
+        break
+      case '3':
+        container.current.classList.remove('ml-0')
+        container.current.classList.remove('-ml-[100%]')
+        container.current.classList.remove('-ml-[200%]')
+        container.current.classList.remove('-ml-[300%]')
+        container.current.classList.add('-ml-[200%]')
+        break
+      case '4':
+        container.current.classList.remove('ml-0')
+        container.current.classList.remove('-ml-[100%]')
+        container.current.classList.remove('-ml-[200%]')
+        container.current.classList.remove('-ml-[300%]')
+        container.current.classList.add('-ml-[300%]')
         break
     }
   }
@@ -35,7 +55,7 @@ const AllMenu = () => {
   return (
     <>
       <div
-        className='lg:w-[85%] xs:h-[520px] xs:w-full overflow-hidden lg:h-[744px] mx-auto opacity-0 transition-all
+        className='lg:w-[85%] xs:h-[520px] xs:w-full overflow-hidden md:h-[744px] mx-auto opacity-0 transition-all
         duration-500'
         ref={main}
       >
@@ -43,124 +63,47 @@ const AllMenu = () => {
           className='lg:w-[200%] xs:w-[400%] h-full flex transition-all ease-expo duration-700'
           ref={container}
         >
-          <div className='flex xs:grid xs:grid-cols-2 md:py-16 lg:w-1/2 xs:w-full xs:content-center'>
-            <div className='lg:flex w-full lg:flex-wrap xs:grid xs:grid-cols-2 gap-14 lg:justify-center'>
-              <MenuCard
-                url={dish1}
-                title='Caramelized Squid Fillet'
-                price='35'
-              />
-              <MenuCard
-                url={dish2}
-                title='Caramelized Squid Fillet2'
-                pos='topRight'
-                price='28'
-              />
-              <MenuCard
-                url={dish3}
-                title='Caramelized Squid Fillet3'
-                price='41'
-              />
-              <MenuCard
-                url={dish4}
-                title='Caramelized Squid Fillet4'
-                pos='topRight'
-                price='25'
-              />
-            </div>
-            <div className='lg:flex w-full lg:flex-wrap xs:grid xs:grid-cols-2 gap-14 lg:justify-center'>
-              <MenuCard
-                url={dish1}
-                title='Caramelized Squid Fillet5'
-                price='35'
-              />
-              <MenuCard
-                url={dish2}
-                title='Caramelized Squid Fillet6'
-                pos='topRight'
-                price='28'
-              />
-              <MenuCard
-                url={dish3}
-                title='Caramelized Squid Fillet7'
-                price='41'
-              />
-              <MenuCard
-                url={dish4}
-                title='Caramelized Squid Fillet8'
-                pos='topRight'
-                price='25'
-              />
-            </div>
+          <div className='grid grid-cols-4 w-1/2 pt-10'>
+            <MenuCard url={dish1} title='Granada with yogurt 1' price='21' />
+            <MenuCard url={dish2} title='Granada with yogurt 2' price='34' pos='topRight' />
+            <MenuCard url={dish3} title='Granada with yogurt 3' price='41' pos='bottomRight' />
+            <MenuCard url={dish4} title='Granada with yogurt 4' price='25' pos='topRight' />
+            <MenuCard url={dish1} title='Granada with yogurt 5' price='51' pos='bottomRight' />
+            <MenuCard url={dish2} title='Granada with yogurt 6' price='28' pos='topRight' />
+            <MenuCard url={dish3} title='Granada with yogurt 7' price='55' pos='bottomRight' />
+            <MenuCard url={dish4} title='Granada with yogurt 8' price='61' pos='topRight' />
           </div>
-          <div className='flex xs:grid xs:grid-cols-2 md:py-16 md:w-1/2 xs:w-full xs:content-center'>
-            <div className='md:flex w-full md:flex-wrap xs:grid xs:grid-cols-2 gap-14 md:justify-center'>
-              <MenuCard
-                url={dish1}
-                title='Caramelized Squid Fillet9'
-                price='35'
-              />
-              <MenuCard
-                url={dish2}
-                title='Caramelized Squid Fillet10'
-                pos='topRight'
-                price='28'
-              />
-              <MenuCard
-                url={dish3}
-                title='Caramelized Squid Fillet11'
-                price='41'
-              />
-              <MenuCard
-                url={dish4}
-                title='Caramelized Squid Fillet12'
-                pos='topRight'
-                price='25'
-              />
-            </div>
-            <div className='md:flex w-full md:flex-wrap xs:grid xs:grid-cols-2 gap-14 md:justify-center'>
-              <MenuCard
-                url={dish1}
-                title='Caramelized Squid Fillet13'
-                price='35'
-              />
-              <MenuCard
-                url={dish2}
-                title='Caramelized Squid Fillet14'
-                pos='topRight'
-                price='28'
-              />
-              <MenuCard
-                url={dish3}
-                title='Caramelized Squid Fillet15'
-                price='41'
-              />
-              <MenuCard
-                url={dish4}
-                title='Caramelized Squid Fillet16'
-                pos='topRight'
-                price='25'
-              />
-            </div>
+          <div className='grid grid-cols-4 w-1/2 pt-10'>
+            <MenuCard url={dish1} title='Granada with yogurt 1' price='21' />
+            <MenuCard url={dish2} title='Granada with yogurt 2' price='34' pos='topRight' />
+            <MenuCard url={dish3} title='Granada with yogurt 3' price='41' pos='bottomRight' />
+            <MenuCard url={dish4} title='Granada with yogurt 4' price='25' pos='topRight' />
+            <MenuCard url={dish1} title='Granada with yogurt 5' price='51' pos='bottomRight' />
+            <MenuCard url={dish2} title='Granada with yogurt 6' price='28' pos='topRight' />
+            <MenuCard url={dish3} title='Granada with yogurt 7' price='55' pos='bottomRight' />
+            <MenuCard url={dish4} title='Granada with yogurt 8' price='61' pos='topRight' />
           </div>
         </div>
       </div>
-      <div className='flex items-center justify-center gap-5'>
+      <div className='flex items-center justify-center md:gap-5 xs:gap-1'>
         <hr className='w-4 h-1 bg-mustard' />
-        <span
-          className='item-slide text-gray w-9 h-9 grid place-content-center rounded-full cursor-pointer active'
-          id='1'
-          onClick={swap}
-        >
-          1
-        </span>
-        <span
-          className='item-slide text-gray w-9 h-9 grid place-content-center rounded-full cursor-pointer'
-          id='2'
-          onClick={swap}
-        >
-          2
-        </span>
+        {
+          window.innerWidth > 768
+            ? (
+              <>
+                <ButtonSlide fn={swap} id='1' activeFirst />
+                <ButtonSlide fn={swap} id='2' />
+              </>
+              )
+            : (
+              <>
+                <ButtonSlide fn={swap} id='1' activeFirst />
+                <ButtonSlide fn={swap} id='2' />
+                <ButtonSlide fn={swap} id='3' />
+                <ButtonSlide fn={swap} id='4' />
+              </>
+              )
+        }
         <hr className='w-4 h-1 bg-mustard' />
       </div>
     </>

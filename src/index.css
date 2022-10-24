@@ -100,5 +100,6 @@ nav a {
 }
 
 nav a:hover {
-  @apply after:absolute after:w-10 after:h-[1px] after:bottom-0 after:left-0 after:bg-mustard;
+  @apply after:absolute after:w-10 after:h-[1px] after:bottom-0 after:left-0 after:bg-mustard xs:hover:text-black
+  md:hover:text-white;
 }

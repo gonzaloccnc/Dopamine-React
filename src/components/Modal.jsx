@@ -9,7 +9,7 @@ const Modal = ({
   placeHolder1,
   placeHolder2,
   type1 = 'text',
-  type2 = 'text',
+  type2 = 'text'
 }) => {
   const [form, setForm] = useState({ name: '', number: '', comment: '' })
   const [modal, setModal] = useModal()
@@ -43,7 +43,7 @@ const Modal = ({
   const updateInput = e => {
     setForm(state => ({
       ...state,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     }))
   }
 
@@ -54,7 +54,7 @@ const Modal = ({
       onClick={closeModalOw}
     >
       <div
-        className={`xs:w-4/5 xs:h-1/2 sm:w-2/5 sm:h-3/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 relative rounded-2xl xs:border xs:border-mustard md:border-0 md:before:content-[""] md:before:border md:before:border-mustard md:before:border-solid md:before:w-full md:before:h-full md:before:absolute md:before:rounded-2xl md:before:-bottom-5 md:before:-right-5`}
+        className={'xs:w-4/5 xs:h-1/2 sm:w-2/5 sm:h-3/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 relative rounded-2xl xs:border xs:border-mustard md:border-0 md:before:content-[""] md:before:border md:before:border-mustard md:before:border-solid md:before:w-full md:before:h-full md:before:absolute md:before:rounded-2xl md:before:-bottom-5 md:before:-right-5'}
       >
         <div className='w-full h-full rounded-2xl bg-night text-center text-white pt-7 relative'>
           <div className='w-3/5 mx-auto h-full justify-around flex-col flex relative'>
@@ -94,17 +94,19 @@ const Modal = ({
             </a>
           </div>
         </div>
-        {modal ? (
-          <div className='w-full h-full rounded-2xl bg-night grid place-content-center absolute top-0 left-0 text-white'>
-            <h3 className='w-3/5 text-center mx-auto'>{sendMessage}</h3>
-            <AiOutlineClose
-              className='absolute top-5 right-5 cursor-pointer'
-              fontSize='20'
-              fill='#F8B525'
-              onClick={closeModal}
-            />
-          </div>
-        ) : null}
+        {modal
+          ? (
+            <div className='w-full h-full rounded-2xl bg-night grid place-content-center absolute top-0 left-0 text-white'>
+              <h3 className='w-3/5 text-center mx-auto'>{sendMessage}</h3>
+              <AiOutlineClose
+                className='absolute top-5 right-5 cursor-pointer'
+                fontSize='20'
+                fill='#F8B525'
+                onClick={closeModal}
+              />
+            </div>
+            )
+          : null}
       </div>
     </div>
   )

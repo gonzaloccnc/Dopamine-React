@@ -8,16 +8,18 @@ const ArticleAbout = ({ subtitle, url, first, children, pos, last }) => {
         first ? 'xs:flex xs:flex-col-reverse' : ''
       }`}
     >
-      {first ? (
-        <CardBorder
-          url={url}
-          pos={pos}
-          size='md:w-[400px] md:h-[324px]'
-          center
-        />
-      ) : (
-        ''
-      )}
+      {first
+        ? (
+          <CardBorder
+            url={url}
+            pos={pos}
+            size='md:w-[400px] md:h-[324px]'
+            center
+          />
+          )
+        : (
+            ''
+          )}
       <div className='md:w-1/2 xs:py-4 md:py-10 relative'>
         <h2 className='flex items-center gap-2 justify-start'>
           <hr className='w-4 h-1 bg-mustard' />
@@ -27,26 +29,30 @@ const ArticleAbout = ({ subtitle, url, first, children, pos, last }) => {
           {children}
         </p>
       </div>
-      {!first ? (
-        <CardBorder
-          url={url}
-          pos={pos}
-          size='xs:w-[160px] xs:h-[100px] md:w-[400px] md:h-[324px]'
-        />
-      ) : (
-        ''
-      )}
-      {last ? (
-        <BsFillArrowUpCircleFill
-          fill='transparent'
-          stroke='#F8B525'
-          strokeWidth='1'
-          overflow='unset'
-          className='md:absolute md:bottom-0 md:left-40 xs:mt-10 xs:mx-auto xs:text-[25px] sm:text-[35px]'
-        />
-      ) : (
-        ''
-      )}
+      {!first
+        ? (
+          <CardBorder
+            url={url}
+            pos={pos}
+            size='xs:w-[160px] xs:h-[100px] md:w-[400px] md:h-[324px]'
+          />
+          )
+        : (
+            ''
+          )}
+      {last
+        ? (
+          <BsFillArrowUpCircleFill
+            fill='transparent'
+            stroke='#F8B525'
+            strokeWidth='1'
+            overflow='unset'
+            className='md:absolute md:bottom-0 md:left-40 xs:mt-10 xs:mx-auto xs:text-[25px] sm:text-[35px]'
+          />
+          )
+        : (
+            ''
+          )}
     </div>
   )
 }

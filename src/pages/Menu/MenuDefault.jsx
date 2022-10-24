@@ -10,7 +10,7 @@ const MenuDefault = ({ state, set }) => {
   return (
     <>
       <TitleDecorate title='Menu' />
-      <div className='grid md:grid-cols-4 xs:grid-cols-2 gap-y-8'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-y-8'>
         <MenuCard title='Caramelized Squid Fillet' url={dish1} price='34' />
         <MenuCard
           title='Caramelized Squid Fillet'

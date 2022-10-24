@@ -14,9 +14,9 @@ const Contact = () => {
   }
 
   return (
-    <main className='md:py-16 xs:pt-12 h-screen'>
+    <main className='md:py-16 xs:pt-12 h-screen lg:block'>
       <TitleDecorate title='Contact us' />
-      <div className='flex xs:flex-row-reverse md:flex-row justify-around xs:gap-8 xs:pl-5'>
+      <div className='flex xs:flex-row-reverse md:flex-row justify-around xs:gap-8 xs:pl-5 xs:items-center xs:mt-20 md:mt-0'>
         <div className='md:w-80 flex flex-col md:gap-16 xs:gap-6'>
           <div className='xs:flex xs:flex-col md:block xs:items-end xs:px-5 md:px-0'>
             <SubtitleDecorate title='Address' />
@@ -46,7 +46,7 @@ const Contact = () => {
         </div>
         <CardBorder
           url={map}
-          size='lg:w-[480px] lg:h-[480px] xs:h-[160px] xs:mx-0 xs:mt-0 sm:h-[300px]'
+          size='lg:w-[480px] lg:h-[480px] xs:h-[160px] xs:mx-0 xs:mt-0 sm:h-[300px] xs:w-[160px] xs:h-[100px]'
           pos='bottomRight'
         />
       </div>
@@ -55,16 +55,18 @@ const Contact = () => {
           Reserve a Table
         </a>
       </div>
-      {modal ? (
-        <Modal
-          closeModal={openModal}
-          message='Please leave your contact number and we will call you back.'
-          sendMessage='Thank you! We will call you in a minute'
-          placeHolder1='Name'
-          placeHolder2='Number'
-          type2='number'
-        />
-      ) : null}
+      {modal
+        ? (
+          <Modal
+            closeModal={openModal}
+            message='Please leave your contact number and we will call you back.'
+            sendMessage='Thank you! We will call you in a minute'
+            placeHolder1='Name'
+            placeHolder2='Number'
+            type2='number'
+          />
+          )
+        : null}
     </main>
   )
 }
