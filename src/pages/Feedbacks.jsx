@@ -7,7 +7,7 @@ import person4 from '../../assets/person4.jpg'
 import { AiFillStar } from 'react-icons/ai'
 import {
   BsFillArrowLeftCircleFill,
-  BsFillArrowRightCircleFill,
+  BsFillArrowRightCircleFill
 } from 'react-icons/bs'
 import { useRef } from 'react'
 import Modal from '../components/Modal'
@@ -62,143 +62,153 @@ const Feedbacks = () => {
   return (
     <main className='py-16'>
       <TitleDecorate title='Feedbacks' />
-      <div className='flex flex-wrap w-[850px] h-[280px] mx-auto gap-20'>
+      <div className='flex flex-wrap w-full md:h-[300px] mx-auto md:gap-20 xs:gap-10 xs:px-10 md:px-0 xs:mt-20 md:mt-0'>
         <div
           id='slider'
           className='flex gap-10 justify-center items-center h-full w-full'
         >
-          <BsFillArrowLeftCircleFill
-            fontSize='35'
-            fill='transparent'
-            stroke='#F8B525'
-            strokeWidth='1'
-            overflow='unset'
-            onClick={() => sliderFeedback('left')}
-          />
+          {
+            window.innerWidth > 768
+              ? <BsFillArrowLeftCircleFill
+                  fontSize='35'
+                  fill='transparent'
+                  stroke='#F8B525'
+                  strokeWidth='1'
+                  overflow='unset'
+                  onClick={() => sliderFeedback('left')}
+                />
+              : ''
+          }
           <div className='flex justify-around w-[700px] h-full overflow-hidden'>
             <div className='w-full'>
               <div className='w-[400%] flex' ref={slider}>
-                <div className='flex justify-around w-full' id='1'>
+                <div className='flex justify-around w-full xs:gap-8' id='1'>
                   <CardBorder
                     url={person}
                     pos='bottomRight'
-                    size='md:w-[250px] md:h-[250px]'
+                    size='md:w-[250px] md:h-[250px] xs:w-20 xs:h-20'
                   />
-                  <div className='text-white w-1/2 relative'>
+                  <div className='text-white md:w-1/2 xs:w-3/4 relative'>
                     <h2>Martha</h2>
                     <p className='mt-5'>
                       Do yourself a favor and visit this lovely restaurant! The
                       service is unmatched. The staff truly cares about your
                       experience. The food is absolutely amazing - everything we
                       tasted melted in other mouths. Absolutely the best meal we
-                      had whil. Highly recommend!
+                      had while. Highly recommend!
                     </p>
-                    <div className='flex absolute bottom-0 left-0'>
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
+                    <div className='flex absolute md:bottom-0 md:left-0 md:top-auto xs:top-2 xs:right-0'>
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
                     </div>
                   </div>
                 </div>
-                <div className='flex justify-around w-full' id='2'>
+                <div className='flex justify-around w-full xs:gap-8' id='2'>
                   <CardBorder
                     url={person2}
                     pos='bottomRight'
-                    size='w-[250px] h-[250px]'
+                    size='md:w-[250px] md:h-[250px] xs:w-20 xs:h-20'
                   />
-                  <div className='text-white w-1/2 relative'>
-                    <h2>Jose</h2>
+                  <div className='text-white md:w-1/2 xs:w-3/4 relative'>
+                    <h2>Martha</h2>
                     <p className='mt-5'>
                       Do yourself a favor and visit this lovely restaurant! The
                       service is unmatched. The staff truly cares about your
                       experience. The food is absolutely amazing - everything we
                       tasted melted in other mouths. Absolutely the best meal we
-                      had whil. Highly recommend!
+                      had while. Highly recommend!
                     </p>
-                    <div className='flex absolute bottom-0 left-0'>
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
+                    <div className='flex absolute md:bottom-0 md:left-0 md:top-auto xs:top-2 xs:right-0'>
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
                     </div>
                   </div>
                 </div>
-                <div className='flex justify-around w-full' id='3'>
+                <div className='flex justify-around w-full xs:gap-8' id='3'>
                   <CardBorder
                     url={person3}
                     pos='bottomRight'
-                    size='w-[250px] h-[250px]'
+                    size='md:w-[250px] md:h-[250px] xs:w-20 xs:h-20'
                   />
-                  <div className='text-white w-1/2 relative'>
-                    <h2>Sofia</h2>
+                  <div className='text-white md:w-1/2 xs:w-3/4 relative'>
+                    <h2>Martha</h2>
                     <p className='mt-5'>
                       Do yourself a favor and visit this lovely restaurant! The
                       service is unmatched. The staff truly cares about your
                       experience. The food is absolutely amazing - everything we
                       tasted melted in other mouths. Absolutely the best meal we
-                      had whil. Highly recommend!
+                      had while. Highly recommend!
                     </p>
-                    <div className='flex absolute bottom-0 left-0'>
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
+                    <div className='flex absolute md:bottom-0 md:left-0 md:top-auto xs:top-2 xs:right-0'>
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
                     </div>
                   </div>
                 </div>
-                <div className='flex justify-around w-full' id='4'>
+                <div className='flex justify-around w-full xs:gap-8' id='4'>
                   <CardBorder
                     url={person4}
                     pos='bottomRight'
-                    size='w-[250px] h-[250px]'
+                    size='md:w-[250px] md:h-[250px] xs:w-20 xs:h-20'
                   />
-                  <div className='text-white w-1/2 relative'>
-                    <h2>Maria</h2>
+                  <div className='text-white md:w-1/2 xs:w-3/4 relative'>
+                    <h2>Martha</h2>
                     <p className='mt-5'>
                       Do yourself a favor and visit this lovely restaurant! The
                       service is unmatched. The staff truly cares about your
                       experience. The food is absolutely amazing - everything we
                       tasted melted in other mouths. Absolutely the best meal we
-                      had whil. Highly recommend!
+                      had while. Highly recommend!
                     </p>
-                    <div className='flex absolute bottom-0 left-0'>
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
-                      <AiFillStar fill='#FFD160' fontSize='25' />
+                    <div className='flex absolute md:bottom-0 md:left-0 md:top-auto xs:top-2 xs:right-0'>
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
+                      <AiFillStar fill='#FFD160' className='xs:text-h3 md:text-h1' />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <BsFillArrowRightCircleFill
-            fontSize='35'
-            fill='transparent'
-            stroke='#F8B525'
-            strokeWidth='1'
-            overflow='unset'
-            onClick={() => sliderFeedback('right')}
-          />
+          {
+            window.innerWidth > 768
+              ? <BsFillArrowRightCircleFill
+                  fontSize='35'
+                  fill='transparent'
+                  stroke='#F8B525'
+                  strokeWidth='1'
+                  overflow='unset'
+                  onClick={() => sliderFeedback('right')}
+                />
+              : ''
+          }
         </div>
-        <a href='#' className='buttom' onClick={openModal}>
+        <a href='#' className='buttom xs:text-h4 sm:text-h3' onClick={openModal}>
           Leave a Comment
         </a>
       </div>
-      {modal ? (
-        <Modal
-          closeModal={openModal}
-          message='It will be pleasant for us to know your opinion.'
-          sendMessage='Thank you for you comment.'
-          placeHolder1='Name'
-          placeHolder2='Comment'
-        />
-      ) : null}
+      {modal
+        ? (
+          <Modal
+            closeModal={openModal}
+            message='It will be pleasant for us to know your opinion.'
+            sendMessage='Thank you for you comment.'
+            placeHolder1='Name'
+            placeHolder2='Comment'
+          />
+          )
+        : null}
     </main>
   )
 }

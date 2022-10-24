@@ -8,7 +8,7 @@ const Home = () => {
     e.preventDefault()
     openModal(!modal)
   }
-  console.log(mainIMG)
+
   return (
     <main className='flex'>
       <div className='w-2/5 h-screen bg-night pt-[150px] pl-10 md:flex flex-col justify-around xs:hidden'>
@@ -24,8 +24,8 @@ const Home = () => {
         </div>
       </div>
       <div
-        className={`xs:w-full md:w-3/5 h-screen bg-no-repeat bg-cover`}
-        style={{backgroundImage: `url(${mainIMG})`}}
+        className='xs:w-full md:w-3/5 h-screen bg-no-repeat bg-cover'
+        style={{ backgroundImage: `url(${mainIMG})` }}
         id='bg-wave'
       >
         <div className='md:hidden sm:block'>
@@ -38,16 +38,18 @@ const Home = () => {
           </a>
         </div>
       </div>
-      {modal ? (
-        <Modal
-          closeModal={openModal}
-          message='Please leave your contact number and we will call you back.'
-          sendMessage='Thank you! We will call you in a minute'
-          placeHolder1='Name'
-          placeHolder2='Number'
-          type2='number'
-        />
-      ) : null}
+      {modal
+        ? (
+          <Modal
+            closeModal={openModal}
+            message='Please leave your contact number and we will call you back.'
+            sendMessage='Thank you! We will call you in a minute'
+            placeHolder1='Name'
+            placeHolder2='Number'
+            type2='number'
+          />
+          )
+        : null}
     </main>
   )
 }

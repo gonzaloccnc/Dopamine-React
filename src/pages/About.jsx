@@ -7,7 +7,7 @@ import food3 from '../../assets/food3.jpg'
 const About = () => {
   return (
     <main className='w-100 h-auto md:py-16 xs:pt-12'>
-      <TitleDecorate title={'About Us'} />
+      <TitleDecorate title='About Us' />
       <section>
         <ArticleAbout url={food1} subtitle='Why Dopamine'>
           First of all, it is the place for people who are ague to eat delicious

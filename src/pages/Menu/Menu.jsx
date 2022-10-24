@@ -6,15 +6,13 @@ const Menu = () => {
   const [allMenu, setAllMenu] = useState(false)
 
   useState(() => {
-
-    if(window.innerWidth < 768){
+    if (window.innerWidth < 768) {
       setAllMenu(!allMenu)
     }
   }, [])
 
   return (
-    <main className='w-full md:py-16 md:static md:translate-y-0 md:translate-x-0 xs:py-12 xs:absolute
-    xs:top-1/2 xs:left-1/2 xs:-translate-x-1/2 xs:-translate-y-1/2'>
+    <main className='w-full md:py-16 xs:grid xs:place-content-center xs:h-screen lg:h-auto lg:block'>
       {allMenu ? <AllMenu /> : <MenuDefault state={allMenu} set={setAllMenu} />}
     </main>
   )
